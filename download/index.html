@@ -80,13 +80,25 @@
         header {
             position: fixed; top: 0; left: 0; width: 100%;
             height: var(--header-height);
-            display: flex; justify-content: flex-end; align-items: center;
+            display: flex; justify-content: space-between; align-items: center;
             padding: 0 48px;
             background: rgba(3, 6, 10, .75);
             backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border);
             z-index: 1000;
         }
+        
+        .brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 700;
+            font-size: 18px;
+            font-family: 'JetBrains Mono', monospace;
+            transition: var(--transition);
+        }
+        .brand:hover { color: var(--btn-sea); }
         
         nav { display: flex; gap: 28px; align-items: center; }
         nav a {
@@ -461,11 +473,14 @@
     <div id="background"></div>
 
     <header id="header">
+        <a href="/" class="brand">
+            Bubble Launcher
+        </a>
         <nav id="nav">
             <a href="#home" data-nav>Главная</a>
             <a href="#features" data-nav>Возможности</a>
             <a href="#rules" data-nav>Правила</a>
-            <a href="/download">Скачать</a>
+            <a href="/download/">Скачать</a>
         </nav>
         <button class="menu-toggle" id="menuToggle" aria-label="Меню">
             <span></span><span></span><span></span>
@@ -475,7 +490,7 @@
     <section class="hero" id="home">
         <p>Bubble Launcher — быстрый и безопасный лаунчер с эксклюзивными сборками, модами и живым комьюнити. Всё, что нужно для комфортной игры — в одном месте.</p>
         <div class="buttons">
-            <a href="/download" class="btn btn-primary">Скачать лаунчер</a>
+            <a href="/download/" class="btn btn-primary">Скачать лаунчер</a>
             <a href="https://discord.gg/gPUtnj87Fv" target="_blank" rel="noopener" class="btn btn-ghost">Discord-сервер</a>
         </div>
     </section>
